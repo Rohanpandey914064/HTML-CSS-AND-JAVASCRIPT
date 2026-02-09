@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-content: center;
+        }
+        div{
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 30px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        form{
+            padding: 20px;
+        }
+        input{
+            margin: 5px;
+            box-sizing: border-box;
+        }
+        input[type="email"],input[type="password"],input[type="number"]{
+            width: 150px;
+            height: 25px;
+            border-radius: 30px;
+            border: 1px solid black;
+            padding-left: 10px;
+            transition: 2s ease-in-out;
+        }
+        input[type="submit"],input[type="reset"]{
+            width:150px;
+            height: 25px;
+            border-radius: 30px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        input:hover{
+            background-color: rgb(222, 195, 195);
+        }
+        input[type="submit"]:hover{
+            background-color: yellow;
+            border: 1px solid green;
+            color: black;
+        }
+        input[type="reset"]:hover{
+            background-color: rgb(0, 217, 255);
+            border: 1px solid green;
+            color: black;
+        }
+
+        a{
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            background-color: tomato;
+            padding: 1em;
+            border-radius: 10px;
+            font-weight: 600;
+
+        }
+        a:visited{
+            background-color: rgb(220, 45, 236);
+        }
+        a:active{
+            background-color: blue;
+        }
+        input:focus{
+            background-color: rgb(236, 220, 220);
+            outline: none;
+        }
+        input[type="number"]:invalid{
+            border: 2px solid red;
+        }
+        input[type="number"]:valid{
+            border: 2px solid green;
+        }
+        input[type="checkbox"]:checked + span{
+                text-decoration: line-through;
+                color: rgb(131, 101, 101);
+        }
+
+        li:first-child{
+            border: 2px dotted black;
+        }
+        li:last-child{
+            border: 2px solid rgb(43, 0, 255);
+        }
+        li:nth-child(4){
+            background-color: yellow;
+        }
+        li:nth-child(3n){
+            background-color: rgb(255, 0, 247);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <input type="email" placeholder="Enter your gmail"><br/>
+            <input type="password" placeholder="Enter your password"><br/>
+            <input type="submit" value="SIGN IN"><br/>
+            <input type="reset">
+        </form>
+    </div>
+    <br/><br/><br/>
+    <a href="https://youtube.com">This is a link</a>
+    <br/><br/>
+    <input type="number" placeholder="Enter number < 10" max="10">
+    <br/><br/>    
+    <input id="cha" type="checkbox">
+    <span id="yes">Todo-Element</span>
+    <br/><br/><br/>
+    <ol>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+        <li>this is a list-item</li>
+    </ol>
+</body>
+</html>

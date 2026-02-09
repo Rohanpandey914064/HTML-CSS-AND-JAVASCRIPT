@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinatiors</title>
+    <style>
+        header{
+            background-color: rgb(238, 223, 107);
+            padding: 20px;
+        }
+        div{
+            background-color: rgb(239, 163, 64);
+            padding: 20px;
+        }
+        div > h1 {
+            color: blue;
+        }
+        div.newType > h1{
+             color: palevioletred;
+        }
+        h1 ~ p{
+            color: blueviolet;
+        }
+        /* h1 + p{
+            color: red;
+        }*/
+        
+    </style>
+</head>
+<body>
+    <header>
+        <p>h1 ~ p not work on this bacuses they only work on there next all neighbor</p>
+        <h1>hello, Rohan pandey</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque neque officiis soluta accusamus, consequatur placeat consequuntur ratione amet, atque iure, sit obcaecati ab aperiam maxime sunt alias totam explicabo!</p>
+    </header>
+    <div>
+        <h1>hello, Rohan pandey</h1>       
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque neque officiis soluta accusamus, consequatur placeat consequuntur ratione amet, atque iure, sit obcaecati ab aperiam maxime sunt alias totam explicabo!</p>
+        <p>rohan par ye h1 + p kam nhi karega is par h1 ~ p kam karega. because ye kewal apne just next neighbor ko leta hai.</p>
+    </div>
+    <div class="newType">
+        <h1>hello, Rohan pandey</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque neque officiis soluta accusamus, consequatur placeat consequuntur ratione amet, atque iure, sit obcaecati ab aperiam maxime sunt alias totam explicabo!</p>
+    </div>
+</body>
+</html>

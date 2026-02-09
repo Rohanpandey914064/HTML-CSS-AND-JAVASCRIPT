@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        :root{
+            --rohan-color: rgb(248, 245, 245);
+        }
+        *{
+            padding: 0;
+        } 
+        html{
+            font-family: Poppins;
+            font-size: 12px;
+            counter-reset: numbers;
+        }
+        body{
+            min-height: 100vh;
+            padding: 20px 50px;
+            overflow: hidden;
+        }
+        p::first-letter{
+            font-weight: bold;
+            color: red;
+            font-size: 30px;
+        }
+        p::first-line{
+            background-color: yellow;
+        }
+        input[type="text"]::placeholder{
+            color: blue;
+            font-weight: bold;
+        }
+        h1{
+            position: relative;
+            width: max-content;
+        }
+        h1::after{
+            content: '';
+            background: linear-gradient(to right, red , rgb(128, 0, 255) , rgb(9, 20, 227)) ;
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            bottom : 0;
+            left : 0;
+            border-radius: 100px;
+            transition: 100ms;
+        }
+        h1:hover::after{
+            width: 0;
+        }
+        ol{
+            margin-top: 10px;
+            padding-left: 30px;
+            list-style: none;
+        }
+        ol li{
+            margin-top: 5px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            counter-increment: numbers;
+        }
+        ol li::before{
+            content: counter(numbers);
+            border-radius: 50%;
+            width: 16px;
+            background-color: #0071ff;
+            color: var(--rohan-color);
+            position: absolute;
+            left: -23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+
+        button{
+            padding: 1em 3em;
+            font-family: Poppins, sans-serif;
+            font-weight: 600;
+            border: none;
+            border-radius: 2px;
+            color: var(--rohan-color);
+            background: linear-gradient(to right , #2abfff , #0071ff);
+            position: relative;
+            z-index: 0;
+            cursor: pointer;
+        }
+
+        button::after{
+            content: '';
+            background: linear-gradient(to right, #ffee00, #ffb300);
+            height: 100%;
+            width: 0px;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: 150ms ease-in-out;
+        }
+        button:hover::after{
+            width: 100%;
+        }
+        button:hover{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="this is a placeholder">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dignissimos expedita possimus nostrum praesentium tenetur molestiae, repudiandae voluptatum eligendi labore eum deserunt amet quas voluptatibus consequuntur, quo beatae. Numquam, quas!</p>
+    <br/><br/><br/>
+    <h1>My Element</h1>
+
+    <br/><br/><br/>
+    <h2>Order list Redesign</h2>
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Iure, impedit dolorem delectus quo error corporis soluta vitae</li> 
+        <li>nihil officia, doloremque amet non! Officia modi aperiam tempora</li>  
+        <li>dolorem totam laboriosam ullam.</li>
+    </ol>
+    <br/><br/><br/>
+    <button>Hover Me!</button>
+</body>
+</html>
